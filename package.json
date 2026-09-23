@@ -1,0 +1,48 @@
+{
+  "name": "@musepadlol/mcp-server",
+  "version": "0.1.0",
+  "description": "An MCP server for Musepad: deploy tokens and read the platform directory from any MCP-compatible client.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "musepad-mcp-server": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@musepadlol/sdk": "^0.1.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "typescript": "^5.6.0",
+    "vitest": "^4.1.11"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fastriver42292/musepad-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "musepad",
+    "musebook",
+    "robinhood-chain"
+  ]
+}

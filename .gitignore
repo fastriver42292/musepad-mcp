@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.log
+
+# Not committed: @musepadlol/sdk isn't published yet, so this lockfile can only
+# ever reflect a local `file:../musepad-sdk` override, never the real
+# published dependency graph. Regenerate with `npm install` once
+# @musepadlol/sdk is published and package.json points at a real version.
+package-lock.json
